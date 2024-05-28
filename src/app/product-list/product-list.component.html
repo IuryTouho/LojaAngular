@@ -1,5 +1,26 @@
 <h2>Products</h2>
 
+<div *ngFor="let Product of products">
+    <h3>
+        <a [title]="Product.name + ' details'">
+            {{Product.name }}
+            <!--tag a define um hiperlink-->
+        </a>
+
+        <!--tag h significa headings e o numero que o acompanha é o tamanho vai de 1 até 6-->
+    </h3>
+
+    <p *ngIf="Product.description">
+        description: {{Product.description}}
+        <!--tag p significa paragrafo -->
+    </p>
+
+    <button type="button"(click)="share()">
+        share
+    </button>
+
+</div>
+
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
